@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo - Link Web Extension</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        h1 {
+            color: #333;
+        }
+        .demo-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 30px 0;
+        }
+        .demo-section {
+            padding: 20px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+        }
+        .demo-section h2 {
+            margin-top: 0;
+            color: #0066cc;
+            font-size: 18px;
+        }
+        .before {
+            background-color: #fff5f5;
+            border-color: #ff6b6b;
+        }
+        .after {
+            background-color: #f0f9ff;
+            border-color: #0066cc;
+        }
+        .linkified-url {
+            color: #0066cc;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        .linkified-url:hover {
+            color: #0052a3;
+        }
+        .note {
+            background-color: #fffbeb;
+            padding: 15px;
+            border-left: 4px solid #f59e0b;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Link Web Extension - Demo</h1>
+    
+    <p>Deze demo toont het verschil tussen tekst voor en na het gebruik van de Link Web Extension.</p>
+    
+    <div class="note">
+        <strong>Let op:</strong> Deze demo simuleert wat de extensie doet. In werkelijkheid werkt de extensie automatisch op alle websites zodra je deze installeert.
+    </div>
+    
+    <div class="demo-container">
+        <div class="demo-section before">
+            <h2>❌ Voor (zonder extensie)</h2>
+            <p>Bezoek onze website op https://www.example.com voor meer informatie.</p>
+            <p>Kijk ook op www.github.com voor projecten.</p>
+            <p>Download van ftp://files.example.com/docs</p>
+        </div>
+        
+        <div class="demo-section after">
+            <h2>✅ Na (met extensie)</h2>
+            <p>Bezoek onze website op <a href="https://www.example.com" class="linkified-url" target="_blank" rel="noopener noreferrer">https://www.example.com</a> voor meer informatie.</p>
+            <p>Kijk ook op <a href="http://www.github.com" class="linkified-url" target="_blank" rel="noopener noreferrer">www.github.com</a> voor projecten.</p>
+            <p>Download van <a href="ftp://files.example.com/docs" class="linkified-url" target="_blank" rel="noopener noreferrer">ftp://files.example.com/docs</a></p>
+        </div>
+    </div>
+    
+    <div class="demo-container">
+        <div class="demo-section before">
+            <h2>❌ Voor</h2>
+            <p>Voor vragen: https://stackoverflow.com en algemene info op www.wikipedia.org</p>
+        </div>
+        
+        <div class="demo-section after">
+            <h2>✅ Na</h2>
+            <p>Voor vragen: <a href="https://stackoverflow.com" class="linkified-url" target="_blank" rel="noopener noreferrer">https://stackoverflow.com</a> en algemene info op <a href="http://www.wikipedia.org" class="linkified-url" target="_blank" rel="noopener noreferrer">www.wikipedia.org</a></p>
+        </div>
+    </div>
+    
+    <h2 style="margin-top: 40px;">Hoe werkt het?</h2>
+    <ol>
+        <li>De extensie scant automatisch alle tekst op de pagina</li>
+        <li>URL's worden herkend met een geavanceerd patroon</li>
+        <li>Gevonden URL's worden omgezet in klikbare links</li>
+        <li>Links openen in een nieuw tabblad voor veiligheid</li>
+        <li>Werkt ook met dynamisch toegevoegde content</li>
+    </ol>
+    
+    <h2>Ondersteunde formaten:</h2>
+    <ul>
+        <li>✅ https://example.com</li>
+        <li>✅ http://example.com</li>
+        <li>✅ ftp://example.com</li>
+        <li>✅ www.example.com</li>
+        <li>✅ URL's met parameters en paden</li>
+    </ul>
+</body>
+</html>
