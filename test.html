@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Pagina - Link Web Extension</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        h1 {
+            color: #333;
+        }
+        .test-section {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #f5f5f5;
+            border-radius: 5px;
+        }
+        .test-section h2 {
+            color: #0066cc;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Test Pagina voor Link Web Extension</h1>
+    
+    <p>Deze pagina bevat verschillende vormen van URL's in platte tekst om de extensie te testen.</p>
+    
+    <div class="test-section">
+        <h2>Test 1: Basis URL's met protocol</h2>
+        <p>Bezoek onze website op https://www.example.com voor meer informatie.</p>
+        <p>Download bestanden van http://files.example.com/downloads</p>
+        <p>FTP server: ftp://ftp.example.com/public</p>
+    </div>
+    
+    <div class="test-section">
+        <h2>Test 2: URL's zonder protocol (www)</h2>
+        <p>Kijk ook op www.github.com voor open source projecten.</p>
+        <p>Meer info op www.mozilla.org/nl/ en www.chromium.org</p>
+    </div>
+    
+    <div class="test-section">
+        <h2>Test 3: URL's in een zin</h2>
+        <p>Als je meer wilt weten, bezoek dan https://www.wikipedia.org of www.google.com voor algemene informatie.</p>
+    </div>
+    
+    <div class="test-section">
+        <h2>Test 4: Meerdere URL's</h2>
+        <p>
+            Hier zijn enkele nuttige links: https://www.stackoverflow.com voor programmeer vragen,
+            www.reddit.com voor discussies, en http://news.ycombinator.com voor tech nieuws.
+        </p>
+    </div>
+    
+    <div class="test-section">
+        <h2>Test 5: URL's met parameters</h2>
+        <p>Zoek op https://www.google.com/search?q=test&hl=nl</p>
+        <p>Of bezoek https://example.com/page?id=123&user=test</p>
+    </div>
+    
+    <div class="test-section">
+        <h2>Test 6: Bestaande links (moeten niet dubbel geconverteerd worden)</h2>
+        <p>Dit is al een link: <a href="https://www.example.com">https://www.example.com</a></p>
+        <p>En deze ook: <a href="http://www.test.com">Klik hier</a></p>
+    </div>
+    
+    <div class="test-section">
+        <h2>Test 7: Code blocks (moeten overgeslagen worden)</h2>
+        <p>Hier is wat code:</p>
+        <code>const url = "https://api.example.com/data";</code>
+        <pre>
+function fetchData() {
+    return fetch("https://api.example.com/v1/users");
+}
+        </pre>
+    </div>
+    
+    <div id="dynamic-content"></div>
+    
+    <script>
+        // Test dynamische content
+        setTimeout(() => {
+            const div = document.getElementById('dynamic-content');
+            div.innerHTML = `
+                <div class="test-section">
+                    <h2>Test 8: Dynamisch toegevoegde content</h2>
+                    <p>Deze content werd 2 seconden na het laden toegevoegd.</p>
+                    <p>Bezoek https://www.dynamicurl.com voor meer dynamische content.</p>
+                </div>
+            `;
+        }, 2000);
+    </script>
+</body>
+</html>
