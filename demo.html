@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -57,57 +57,57 @@
 </head>
 <body>
     <h1>Link Web Extension - Demo</h1>
-    
-    <p>Deze demo toont het verschil tussen tekst voor en na het gebruik van de Link Web Extension.</p>
-    
+
+    <p>This demo highlights the difference between plain text before and after the Link Web Extension runs.</p>
+
     <div class="note">
-        <strong>Let op:</strong> Deze demo simuleert wat de extensie doet. In werkelijkheid werkt de extensie automatisch op alle websites zodra je deze installeert.
+        <strong>Note:</strong> This page imitates the extension's behavior. In the browser the extension processes every site automatically as soon as you install it.
     </div>
-    
+
     <div class="demo-container">
         <div class="demo-section before">
-            <h2>❌ Voor (zonder extensie)</h2>
-            <p>Bezoek onze website op https://www.example.com voor meer informatie.</p>
-            <p>Kijk ook op www.github.com voor projecten.</p>
-            <p>Download van ftp://files.example.com/docs</p>
+            <h2>❌ Before (without the extension)</h2>
+            <p>Visit our site at https://www.example.com for more information.</p>
+            <p>Check www.github.com for projects.</p>
+            <p>Download files from ftp://files.example.com/docs</p>
         </div>
-        
+
         <div class="demo-section after">
-            <h2>✅ Na (met extensie)</h2>
-            <p>Bezoek onze website op <a href="https://www.example.com" class="linkified-url" target="_blank" rel="noopener noreferrer">https://www.example.com</a> voor meer informatie.</p>
-            <p>Kijk ook op <a href="http://www.github.com" class="linkified-url" target="_blank" rel="noopener noreferrer">www.github.com</a> voor projecten.</p>
-            <p>Download van <a href="ftp://files.example.com/docs" class="linkified-url" target="_blank" rel="noopener noreferrer">ftp://files.example.com/docs</a></p>
+            <h2>✅ After (with the extension)</h2>
+            <p>Visit our site at <a href="https://www.example.com" class="linkified-url" target="_blank" rel="noopener noreferrer">https://www.example.com</a> for more information.</p>
+            <p>Check <a href="http://www.github.com" class="linkified-url" target="_blank" rel="noopener noreferrer">www.github.com</a> for projects.</p>
+            <p>Download files from <a href="ftp://files.example.com/docs" class="linkified-url" target="_blank" rel="noopener noreferrer">ftp://files.example.com/docs</a></p>
         </div>
     </div>
-    
+
     <div class="demo-container">
         <div class="demo-section before">
-            <h2>❌ Voor</h2>
-            <p>Voor vragen: https://stackoverflow.com en algemene info op www.wikipedia.org</p>
+            <h2>❌ Before</h2>
+            <p>For questions: https://stackoverflow.com and general info at www.wikipedia.org</p>
         </div>
-        
+
         <div class="demo-section after">
-            <h2>✅ Na</h2>
-            <p>Voor vragen: <a href="https://stackoverflow.com" class="linkified-url" target="_blank" rel="noopener noreferrer">https://stackoverflow.com</a> en algemene info op <a href="http://www.wikipedia.org" class="linkified-url" target="_blank" rel="noopener noreferrer">www.wikipedia.org</a></p>
+            <h2>✅ After</h2>
+            <p>For questions: <a href="https://stackoverflow.com" class="linkified-url" target="_blank" rel="noopener noreferrer">https://stackoverflow.com</a> and general info at <a href="http://www.wikipedia.org" class="linkified-url" target="_blank" rel="noopener noreferrer">www.wikipedia.org</a></p>
         </div>
     </div>
-    
-    <h2 style="margin-top: 40px;">Hoe werkt het?</h2>
+
+    <h2 style="margin-top: 40px;">How does it work?</h2>
     <ol>
-        <li>De extensie scant automatisch alle tekst op de pagina</li>
-        <li>URL's worden herkend met een geavanceerd patroon</li>
-        <li>Gevonden URL's worden omgezet in klikbare links</li>
-        <li>Links openen in een nieuw tabblad voor veiligheid</li>
-        <li>Werkt ook met dynamisch toegevoegde content</li>
+        <li>The extension automatically scans all text on the page</li>
+        <li>URLs are detected by a robust pattern</li>
+        <li>Matches are converted into clickable links</li>
+        <li>Links open in a new tab for safety</li>
+        <li>Dynamic content is processed as it appears</li>
     </ol>
-    
-    <h2>Ondersteunde formaten:</h2>
+
+    <h2>Supported formats:</h2>
     <ul>
         <li>✅ https://example.com</li>
         <li>✅ http://example.com</li>
         <li>✅ ftp://example.com</li>
         <li>✅ www.example.com</li>
-        <li>✅ URL's met parameters en paden</li>
+        <li>✅ URLs with parameters and paths</li>
     </ul>
 </body>
 </html>

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test Pagina - Link Web Extension</title>
+    <title>Test Page - Link Web Extension</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -28,51 +28,51 @@
     </style>
 </head>
 <body>
-    <h1>Test Pagina voor Link Web Extension</h1>
-    
-    <p>Deze pagina bevat verschillende vormen van URL's in platte tekst om de extensie te testen.</p>
-    
+    <h1>Test Page for Link Web Extension</h1>
+
+    <p>This page contains different shapes of plain text URLs so you can test the extension.</p>
+
     <div class="test-section">
-        <h2>Test 1: Basis URL's met protocol</h2>
-        <p>Bezoek onze website op https://www.example.com voor meer informatie.</p>
-        <p>Download bestanden van http://files.example.com/downloads</p>
+        <h2>Test 1: Basic URLs with a protocol</h2>
+        <p>Visit our website at https://www.example.com for more information.</p>
+        <p>Download files from http://files.example.com/downloads</p>
         <p>FTP server: ftp://ftp.example.com/public</p>
     </div>
     
     <div class="test-section">
-        <h2>Test 2: URL's zonder protocol (www)</h2>
-        <p>Kijk ook op www.github.com voor open source projecten.</p>
-        <p>Meer info op www.mozilla.org/nl/ en www.chromium.org</p>
+        <h2>Test 2: URLs without a protocol (www)</h2>
+        <p>Also visit www.github.com for open source projects.</p>
+        <p>More info at www.mozilla.org/en-US/ and www.chromium.org</p>
     </div>
     
     <div class="test-section">
-        <h2>Test 3: URL's in een zin</h2>
-        <p>Als je meer wilt weten, bezoek dan https://www.wikipedia.org of www.google.com voor algemene informatie.</p>
+        <h2>Test 3: URLs inside a sentence</h2>
+        <p>If you want to learn more, visit https://www.wikipedia.org or www.google.com for general information.</p>
     </div>
     
     <div class="test-section">
-        <h2>Test 4: Meerdere URL's</h2>
+        <h2>Test 4: Multiple URLs</h2>
         <p>
-            Hier zijn enkele nuttige links: https://www.stackoverflow.com voor programmeer vragen,
-            www.reddit.com voor discussies, en http://news.ycombinator.com voor tech nieuws.
+            Here are a few useful links: https://www.stackoverflow.com for programming questions,
+            www.reddit.com for discussions, and http://news.ycombinator.com for tech news.
         </p>
     </div>
     
     <div class="test-section">
-        <h2>Test 5: URL's met parameters</h2>
-        <p>Zoek op https://www.google.com/search?q=test&hl=nl</p>
-        <p>Of bezoek https://example.com/page?id=123&user=test</p>
+        <h2>Test 5: URLs with parameters</h2>
+        <p>Search at https://www.google.com/search?q=test&hl=en</p>
+        <p>Or visit https://example.com/page?id=123&user=test</p>
     </div>
     
     <div class="test-section">
-        <h2>Test 6: Bestaande links (moeten niet dubbel geconverteerd worden)</h2>
-        <p>Dit is al een link: <a href="https://www.example.com">https://www.example.com</a></p>
-        <p>En deze ook: <a href="http://www.test.com">Klik hier</a></p>
+        <h2>Test 6: Existing links (should not be processed twice)</h2>
+        <p>This is already a link: <a href="https://www.example.com">https://www.example.com</a></p>
+        <p>And this one too: <a href="http://www.test.com">Click here</a></p>
     </div>
     
     <div class="test-section">
-        <h2>Test 7: Code blocks (moeten overgeslagen worden)</h2>
-        <p>Hier is wat code:</p>
+        <h2>Test 7: Code blocks (should be skipped)</h2>
+        <p>Here is some code:</p>
         <code>const url = "https://api.example.com/data";</code>
         <pre>
 function fetchData() {
@@ -84,14 +84,14 @@ function fetchData() {
     <div id="dynamic-content"></div>
     
     <script>
-        // Test dynamische content
+        // Test dynamic content
         setTimeout(() => {
             const div = document.getElementById('dynamic-content');
             div.innerHTML = `
                 <div class="test-section">
-                    <h2>Test 8: Dynamisch toegevoegde content</h2>
-                    <p>Deze content werd 2 seconden na het laden toegevoegd.</p>
-                    <p>Bezoek https://www.dynamicurl.com voor meer dynamische content.</p>
+                    <h2>Test 8: Dynamically added content</h2>
+                    <p>This content was added 2 seconds after load.</p>
+                    <p>Visit https://www.dynamicurl.com for more dynamic examples.</p>
                 </div>
             `;
         }, 2000);

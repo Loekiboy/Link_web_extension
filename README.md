@@ -1,51 +1,51 @@
 # Link Web Extension
 
-Een browserextensie die automatisch alle URL's in platte tekst op websites klikbaar maakt.
+A browser extension that automatically converts plain-text URLs on websites into clickable links.
 
-## Functies
+## Features
 
-- Detecteert automatisch URL's in platte tekst op webpagina's
-- Converteert gevonden URL's naar klikbare links
-- Ondersteunt http://, https://, ftp:// en www. URL's
-- Werkt met dynamische content die na het laden wordt toegevoegd
-- Lichtgewicht en efficiënt
+- Automatically detects plain-text URLs on webpages
+- Converts detected URLs into clickable anchors
+- Supports http://, https://, ftp://, and www. patterns
+- Works with dynamic content injected after page load
+- Lightweight and efficient
 
-## Installatie
+## Installation
 
-### Chrome/Edge
+### Chrome / Edge
 
-1. Download of clone deze repository
-2. Open Chrome/Edge en ga naar `chrome://extensions/` (of `edge://extensions/`)
-3. Schakel "Ontwikkelaarsmodus" in (rechtsboven)
-4. Klik op "Uitgepakte extensie laden"
-5. Selecteer de map met de extensiebestanden
+1. Download or clone this repository.
+2. Open Chrome or Edge and browse to `chrome://extensions/` (or `edge://extensions/`).
+3. Enable **Developer mode** (top-right corner).
+4. Click **Load unpacked**.
+5. Select the folder containing these extension files.
 
 ### Firefox
 
-1. Download of clone deze repository
-2. Open Firefox en ga naar `about:debugging`
-3. Klik op "Deze Firefox"
-4. Klik op "Tijdelijke add-on laden"
-5. Selecteer het `manifest.json` bestand uit de extensiemap
+1. Download or clone this repository.
+2. Open Firefox and navigate to `about:debugging`.
+3. Click **This Firefox**.
+4. Click **Load Temporary Add-on**.
+5. Select the `manifest.json` file from the extension directory.
 
-## Gebruik
+## Usage
 
-Na installatie werkt de extensie automatisch op alle websites. URL's in platte tekst worden automatisch gedetecteerd en omgezet in klikbare links.
+After installation the extension works automatically on every site you visit. Plain-text URLs are detected and turned into clickable links without requiring any interaction.
 
-Voorbeelden van URL's die worden gedetecteerd:
+Examples of URLs that are recognized:
 - `https://www.example.com`
 - `http://example.com/path`
 - `www.example.com`
 - `ftp://files.example.com`
 
-## Technische details
+## Technical details
 
-De extensie bestaat uit:
-- `manifest.json` - Extensie configuratie
-- `content.js` - Hoofdscript dat URL's detecteert en omzet
-- `styles.css` - Styling voor de gegenereerde links
-- `icons/` - Extensie iconen
+The extension consists of:
+- `manifest.json` – Extension configuration
+- `content.js` – Script that detects and transforms URLs
+- `styles.css` – Styling applied to generated links
+- `icons/` – Extension icons
 
-## Licentie
+## License
 
 MIT

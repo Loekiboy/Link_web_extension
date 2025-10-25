@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Link Clickable Maker",
   "version": "1.0.0",
-  "description": "Maakt alle URL's in tekst op websites klikbaar",
+  "description": "Makes every plain text URL on websites clickable",
   "permissions": [],
   "content_scripts": [
     {

@@ -7,12 +7,12 @@ document.addEventListener('DOMContentLoaded', function () {
     // Try opening a new tab to the extensions page.
     if (chrome.tabs && chrome.tabs.create) {
       chrome.tabs.create({ url });
-      btn.textContent = 'open extensiepagina…';
+      btn.textContent = 'Opening extensions page…';
       btn.disabled = true;
     } else {
       // Fallback: open in the popup window (may be blocked), but still try.
       window.open(url, '_blank');
-      btn.textContent = 'open extensiepagina…';
+      btn.textContent = 'Opening extensions page…';
       btn.disabled = true;
     }
   });
