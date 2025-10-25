@@ -1,0 +1,33 @@
+.container {
+  width: 260px;
+  padding: 12px;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+.icon {
+  width: 96px;
+  height: 96px;
+  object-fit: contain;
+  margin: 6px auto 10px;
+  display: block;
+}
+.btn {
+  display: inline-block;
+  width: 100%;
+  padding: 8px 10px;
+  margin: 6px 0;
+  background: #e74c3c;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.btn:active { transform: translateY(1px); }
+.github {
+  margin-top: 8px;
+  font-size: 13px;
+}
+.github a { color: #2c3e50; text-decoration: none; }
+.github a:hover { text-decoration: underline; }
