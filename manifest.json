@@ -3,7 +3,13 @@
   "name": "Link Clickable Maker",
   "version": "1.0.0",
   "description": "Makes every plain text URL on websites clickable",
-  "permissions": [],
+  "permissions": [
+    "tabs",
+    "scripting"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
   "content_scripts": [
     {
       "matches": ["<all_urls>"],

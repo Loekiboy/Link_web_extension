@@ -17,12 +17,15 @@
   width: 100%;
   padding: 8px 10px;
   margin: 6px 0;
-  background: #e74c3c;
+  background: #2563eb;
   color: #fff;
   border: none;
   border-radius: 6px;
   font-size: 14px;
   cursor: pointer;
+}
+.btn.secondary {
+  background: #6b7280;
 }
 .btn:active { transform: translateY(1px); }
 .github {

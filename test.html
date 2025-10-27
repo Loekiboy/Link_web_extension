@@ -15,6 +15,36 @@
         h1 {
             color: #333;
         }
+        .control-panel {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin: 20px 0;
+            padding: 16px;
+            border: 2px solid #d1d5db;
+            border-radius: 6px;
+            background-color: #f9fafb;
+        }
+        .control-panel button {
+            padding: 10px 16px;
+            border: none;
+            border-radius: 4px;
+            background-color: #2563eb;
+            color: #fff;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        .control-panel button.secondary {
+            background-color: #6b7280;
+        }
+        .control-panel button:disabled {
+            background-color: #9ca3af;
+            cursor: not-allowed;
+        }
+        .status {
+            margin: 0;
+            font-weight: bold;
+        }
         .test-section {
             margin: 20px 0;
             padding: 15px;
@@ -31,6 +61,12 @@
     <h1>Test Page for Link Web Extension</h1>
 
     <p>This page contains different shapes of plain text URLs so you can test the extension.</p>
+
+    <div class="control-panel">
+        <button type="button" id="toggle-extension" class="secondary">Disable link detection</button>
+        <p class="status" id="linkify-status">Link detection is <span id="extension-status">enabled</span>.</p>
+        <p class="status" id="status-message" aria-live="polite"></p>
+    </div>
 
     <div class="test-section">
         <h2>Test 1: Basic URLs with a protocol</h2>
@@ -84,6 +120,51 @@ function fetchData() {
     <div id="dynamic-content"></div>
     
     <script>
+        const toggleButton = document.getElementById('toggle-extension');
+        const statusLabel = document.getElementById('extension-status');
+        const statusMessage = document.getElementById('status-message');
+
+        let extensionEnabled = true;
+        let handshakeReceived = false;
+        const handshakeTimeout = setTimeout(() => {
+            if (!handshakeReceived) {
+                toggleButton.disabled = true;
+                if (statusMessage) {
+                    statusMessage.textContent = 'Extension not detected on this page. Load the page from disk or the web to test link detection.';
+                }
+            }
+        }, 800);
+
+        toggleButton.addEventListener('click', () => {
+            extensionEnabled = !extensionEnabled;
+            window.postMessage({
+                type: 'link-web-extension-toggle',
+                action: extensionEnabled ? 'enable' : 'disable'
+            }, '*');
+            toggleButton.textContent = extensionEnabled ? 'Disable link detection' : 'Enable link detection';
+            statusLabel.textContent = extensionEnabled ? 'enabled' : 'disabled';
+        });
+
+        window.addEventListener('message', (event) => {
+            if (event.source !== window || !event.data) {
+                return;
+            }
+            const data = event.data;
+            if (data.type === 'link-web-extension-toggle-status') {
+                handshakeReceived = true;
+                clearTimeout(handshakeTimeout);
+                toggleButton.disabled = false;
+                extensionEnabled = Boolean(data.enabled);
+                toggleButton.textContent = extensionEnabled ? 'Disable link detection' : 'Enable link detection';
+                statusLabel.textContent = extensionEnabled ? 'enabled' : 'disabled';
+                if (statusMessage) {
+                    statusMessage.textContent = '';
+                }
+            }
+        });
+
+        window.postMessage({ type: 'link-web-extension-request-status' }, '*');
+
         // Test dynamic content
         setTimeout(() => {
             const div = document.getElementById('dynamic-content');

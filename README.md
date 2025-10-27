@@ -12,7 +12,7 @@ A browser extension that automatically converts plain-text URLs on websites into
 
 ## Installation
 
-### Chrome / Edge
+### Chrome(+opera) / Edge
 
 1. Download or clone this repository.
 2. Open Chrome or Edge and browse to `chrome://extensions/` (or `edge://extensions/`).
@@ -37,6 +37,13 @@ Examples of URLs that are recognized:
 - `http://example.com/path`
 - `www.example.com`
 - `ftp://files.example.com`
+
+## Testing
+
+- Open `test.html` in a Chromium-based browser while the extension is loaded.
+- You can open the page straight from the extension popup via **Open test page**.
+- Use the control panel to toggle link detection on and off and verify the current status.
+- When loading the page from disk, enable **Allow access to file URLs** for the extension via `chrome://extensions` so the popup can be opened programmatically; otherwise a local preview of the popup is shown instead.
 
 ## Technical details
 
